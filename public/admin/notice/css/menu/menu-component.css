@@ -1,0 +1,127 @@
+.menu {
+    padding: 20px 0;
+    border-bottom: 1px solid #707070;
+}
+
+.menu:last-child {
+    border: none;
+}
+
+.menu form {
+    display: grid;
+    grid-template:
+        "img title title" 24px
+        "img price option" 24px
+        "img button button" 32px / 80px 60px 1fr;
+}
+
+.menu form>h1 {
+    grid-area: title;
+}
+
+.menu-price {
+    grid-area: price;
+    margin-left: 10px;
+
+    font-size: 15px;
+}
+
+.menu-option-list {
+    grid-area: option;
+    justify-self: flex-end;
+}
+
+.menu-button-list {
+    grid-area: button;
+    justify-self: flex-end;
+}
+
+.menu-option-input {
+    width: 12px;
+    height: 12px;
+    border: 1px solid tomato;
+}
+
+.menu-option-input-on {
+    background-color: tomato;
+}
+
+.menu-option {
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-option .menu-option-input {
+    margin-right: 5px;
+}
+
+.menu-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    object-fit: cover;
+
+    grid-area: img;
+}
+
+/*===================================================*/
+
+@media (min-width: 768px) {
+/*flex와 grid의 차이점 뭐임?
+간격은 고정 아이템이 늘어나게 => grid*/
+    .menu-list{
+        display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-gap: 30px 30px;
+       
+    }
+    .menu {
+        padding: 0 0 10px 0;
+        /* width: 200px; */
+        border: 1px solid #707070;
+        flex-shrink: 0;
+    }
+    .menu:last-child {
+        border: 1px solid #707070;
+    }
+
+    .menu form {
+        display: grid;
+        grid-template:
+            "img img" 130px
+            "title price" 30px
+            "option option" 30px
+            "button button" 40px / 1fr 70px;
+    }
+
+    .menu form>h1 {
+       align-self: center;
+       justify-self: flex-start;
+    }
+
+    .menu-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        object-fit: fill;
+        justify-self: center; 
+        align-self: center;
+    }
+
+    .menu-option-list {
+        justify-self: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-button-list {
+        justify-self: center;
+        display: flex;
+        align-items: center;
+    }
+    .menu-price {
+        align-self: center;
+       justify-self: flex-end;
+       margin-top: 10px;
+    }
+}

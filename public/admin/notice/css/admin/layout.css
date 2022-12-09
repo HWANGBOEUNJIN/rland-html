@@ -1,0 +1,57 @@
+html {
+    height: 100%;
+
+}
+
+body {
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: yellow;
+}
+
+.body {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.aside {
+    background-color: green;
+}
+
+.main {
+    background-color: rgb(255, 0, 0);
+    flex-grow: 1;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+}
+
+/*-------------------------------------*/
+/* 500px이 되면 실행됨 */
+@media (min-width: 576px){
+    /* .body {
+        flex-direction: row;
+ } */
+ .main{
+    background-color: green;
+}
+}
+
+/* 800px이 되면 실행됨 => 우선순위가 제일 높다 마지막에 적용되어서*/
+@media (min-width: 768px){
+    /* .body {
+        flex-direction: row;
+    } */
+    .main{
+        background-color: aquamarine;
+    }
+}

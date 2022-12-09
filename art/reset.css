@@ -1,0 +1,25 @@
+/* 이 파일은 html 태그가 가지고 있는 기본 스타일을 제거하기 위한 스타일 파일입니다.
+
+기존 태그에는 스타일이 있어요? 업성요? > 있다.
+그대로 사용하기에는 적합하지 않다.
+그래서 지우는게 필요하다. > reset.css 파일이다. */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body, h1, h2, ul, li, button{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}

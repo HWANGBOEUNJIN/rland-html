@@ -1,0 +1,46 @@
+.deco{
+    /* 형제들을 정렬하는 건 부모임 */
+    padding-left: 15px;
+    background: url(../../image/note.svg) no-repeat left center;
+    background-size: 16px 16px;
+    display: inline-flex;
+    align-items: center;
+}
+.deco:hover{
+    background-color: black;
+    color: aliceblue;
+
+}
+.deco:hover::before{
+    background-color: yellow;
+}
+
+.deco::before{
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: rgb(255, 0, 0);
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    transition: 1s;
+}
+
+.deco-note::before {
+    mask-image: url(../../image/note.svg);
+    -webkit-mask-image: url(../../image/note.svg);
+  }
+  /*========================================================================================*/
+  .deco-category::before{
+      
+      mask-image: url(../../image/category.svg);
+      
+      -webkit-mask-image: url(../../image/category.svg);
+      
+    }
+    /*==================================================*/
+    .deco-blue::before{
+      background-color: blue;
+    }
+    .deco-red::before{
+        background-color: red;
+    }

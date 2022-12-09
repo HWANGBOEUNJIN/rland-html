@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{    /*body 배경색 지정 */
+        background-color: #000088;
+      }
+      .body{   /* main body 세부 설정 */
+        width: 650px;
+        height: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -325px;
+        margin-top: -200px;
+        background-image: url("image/main_back.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+ 
+      }
+      .select{   /* 게임 선택 블록 */
+        background-color: #005500;
+        width: 400px;
+        height: 350px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        margin-left: -200px;
+        margin-top: -150px;
+      }
+      .select input{   /*input type 스타일 설정 */
+        margin: 25px;
+        width: 150px;
+        height: 35px;
+      }
+ 
+      #rule_button{    /*게임 룰 버튼*/
+        border-color: red;
+        border-width: 6px;
+        background-color: #FFFF66;
+      }
+      #game1{   /*같은 그림 찾기 */
+        border-color : black;
+        border-width : 5px;
+        background-color:
+      }
+      #game2{  /*인디언 포커 */
+        border-color : black;
+        border-width: 5px;
+        background-color:
+      }
+      #game3{   /*블랙잭 */
+        border-color : black;
+        border-width: 5px;
+        background-color:
+      }
+ 
+    </style>
+    <script type="text/javascript">
+        function start(){   
+          setTimeout(show_body,1000);    /* 1초 뒤 함수 실행 */
+        }
+        function show_body(){
+          document.getElementById('body').style.display = "block";
+          setTimeout(show_select,1000);   /*1초 뒤 함수 실행 */
+        }
+ 
+        function show_select(){
+          document.getElementById('select').style.display = "block";
+        }
+ 
+    </script>
+  </head>
+  <body onload="start()">   <!--start 함수 자동 실행 -->
+    <div class="body" id="body" style="display:none;">
+      <div class="select" id="select" align="center" style="display:none;">
+        <input type="button" id="game1" name="" value="Hamburger King" onClick="location.href='temp.html'"><br>
+        <input type="button" id="game2" name="" value="Game Start" onClick="location.href='indian.html'"><br>
+        <input type="button" id="game3" name="" value="How to play game" onClick="location.href='temp.html.html'">
+        <input type="button" id="rule_button" name="" value="creator" onclick ="location.href='rulepage.html'">
+      </div>
+      </div>
+    <audio src="audio/SkrillexBangarang.mp3" autoplay loop></audio>  <!--BGM 재생 -->
+  </body>
+</html>
